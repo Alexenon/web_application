@@ -11,8 +11,9 @@ public class StudentService {
     @Autowired
     StudentRepository repository;
 
-    /* TODO: Think about made this method return type to be void */
+    @SuppressWarnings("UnusedReturnValue")
     public Student saveStudent(Student student) {
+        System.out.println("Student successfully saved!");
         return repository.save(student);
     }
 
