@@ -1,0 +1,87 @@
+body {
+    background-color: #f2f2f2;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Roboto, serif;
+}
+
+/* Card style  */
+
+.card-wrapper {
+    top: 20px;
+    height: 20em;
+    width: 14em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+    box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+/* Card image */
+
+.card-image {
+    width: 14em;
+    padding: 2em 2em;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Bottom card section with all information*/
+
+.card-information {
+    background-color: #FAFAFC;
+    height: 10em;
+    width: 14em;
+    position: absolute;
+    bottom: 0;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+.product-name {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.description {
+    margin-top: 1em;
+    font-size: 12px;
+}
+
+.price {
+    color: #C3A1A0;
+    margin-top: 0.3em;
+}
+
+/* Card Hover States */
+
+.card-wrapper:hover .card-information {
+    height: 0;
+    padding: 0 1em;
+}
+
