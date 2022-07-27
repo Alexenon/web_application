@@ -1,4 +1,5 @@
 import React from "react";
+import DataFetching from '../../components/card-product/DataFetching'
 
 function About() {
     return (
@@ -23,6 +24,7 @@ function About() {
                     </div>
                 </div>
             </div>
+            <DataFetching/>
         </div>
     );
 }
