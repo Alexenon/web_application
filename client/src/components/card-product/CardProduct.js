@@ -6,15 +6,19 @@ function CardProduct(productInfo) {
         <div className="card-wrapper">
             <a href="#">
                 <img className="card-image"
-                     src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg"
-                     alt={productInfo.productName}/>
+                     src={productInfo.image}
+                     alt={productInfo.name}/>
             </a>
-            <div className="property-description">
-                <h5>{productInfo.productName}</h5>
-                <p className="product-description">
-                    The Nike Epic React Flyknit foam cushioning is responsive yet light-weight, durable yet soft.
+            <div className="card-information">
+                <h5 className="product-name">
+                    {productInfo.name}
+                </h5>
+                <p className="description">
+                    {productInfo.description}
                 </p>
-                <h2>${productInfo.price}</h2>
+                <h2 className="price">
+                    ${productInfo.price}
+                </h2>
             </div>
         </div>
     );

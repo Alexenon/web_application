@@ -7,25 +7,7 @@ body {
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-h2 {
-    color: #C3A1A0;
-    margin-top: 1em;
-}
-
-h5 {
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: 700;
-}
-
-p {
-    font-size: 12px;
-}
-
-.product-description {
-    margin-top: 1em;
+    font-family: Roboto, serif;
 }
 
 /* Card style  */
@@ -61,14 +43,13 @@ p {
     -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    /*background-image: url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/* Bottom Card Section */
+/* Bottom card section with all information*/
 
-.property-description {
+.card-information {
     background-color: #FAFAFC;
     height: 10em;
     width: 14em;
@@ -81,9 +62,25 @@ p {
     text-align: center;
 }
 
+.product-name {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.description {
+    margin-top: 1em;
+    font-size: 12px;
+}
+
+.price {
+    color: #C3A1A0;
+    margin-top: 0.3em;
+}
+
 /* Card Hover States */
 
-.card-wrapper:hover .property-description {
+.card-wrapper:hover .card-information {
     height: 0;
     padding: 0 1em;
 }
