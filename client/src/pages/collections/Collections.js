@@ -5,7 +5,7 @@ function Collections() {
     return (
         <div>
             <h1>Welcome to Collection Page</h1>
-            <CardProduct productName="Apple" price={749.99} />
+            <CardProduct productName="Nike" price={249.99} />
         </div>
     );
 }

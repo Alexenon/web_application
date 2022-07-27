@@ -1,3 +1,90 @@
-.card-wrapper {
-    background-color: coral;
+body {
+    background-color: #f2f2f2;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #C3A1A0;
+    margin-top: 1em;
+}
+
+h5 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+p {
+    font-size: 12px;
+}
+
+.product-description {
+    margin-top: 1em;
+}
+
+/* Card style  */
+
+.card-wrapper {
+    top: 20px;
+    height: 20em;
+    width: 14em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+    box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+/* Card image */
+
+.card-image {
+    width: 14em;
+    padding: 2em 2em;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    /*background-image: url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description {
+    background-color: #FAFAFC;
+    height: 10em;
+    width: 14em;
+    position: absolute;
+    bottom: 0;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+/* Card Hover States */
+
+.card-wrapper:hover .property-description {
+    height: 0;
+    padding: 0 1em;
+}
+
