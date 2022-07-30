@@ -30,5 +30,4 @@ public class StudentController {
         return "New student was added";
     }
 
-
 }
