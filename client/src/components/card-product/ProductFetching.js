@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import CardProduct from "./CardProduct";
 
-function DataFetching() {
+function ProductFetching() {
 
     const [posts, setPosts] = useState([]);
 
@@ -30,4 +30,4 @@ function DataFetching() {
     )
 }
 
-export default DataFetching;
+export default ProductFetching;

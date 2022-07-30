@@ -1,5 +1,5 @@
 import React from "react";
-import DataFetching from '../../components/card-product/DataFetching'
+import ProductFetching from '../../components/card-product/ProductFetching'
 
 function About() {
     return (
@@ -24,7 +24,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <DataFetching/>
+            <ProductFetching/>
         </div>
     );
 }
