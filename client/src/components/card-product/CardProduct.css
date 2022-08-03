@@ -1,15 +1,3 @@
-body {
-    background-color: #f2f2f2;
-    font-family: 'RobotoDraft', 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: Roboto, serif;
-}
-
 /* Card style  */
 
 .card-wrapper {
@@ -81,7 +69,7 @@ body {
 /* Card Hover States */
 
 .card-wrapper:hover .card-information {
-    height: 0;
+    height: 7rem;
     padding: 0 1em;
 }
 
