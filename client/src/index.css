@@ -8,3 +8,25 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
+
+html {
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+button {
+    cursor: pointer;
+    font-size: inherit;
+    color: black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+

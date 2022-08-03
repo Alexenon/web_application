@@ -1,3 +1,59 @@
 .header {
-    background-color: brown;
+    background-color: #f2f2f2;
+    padding: 1rem 3%;
 }
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navbar-list,
+.nav-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-list {
+    justify-content: start;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+}
+
+.dropdown-content {
+    display: none;
+    gap: .7rem;
+    margin-left: .3rem;
+    padding: 1rem 2rem 1rem 1rem;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 1.5rem;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.nav-icons {
+    justify-content: end;
+}
+
