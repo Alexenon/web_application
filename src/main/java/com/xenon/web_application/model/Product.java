@@ -1,10 +1,9 @@
 package com.xenon.web_application.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Product {
@@ -14,7 +13,12 @@ public class Product {
     private int id;
     private String name;
     private String description;
+    private String category;
     private BigDecimal price;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="product_id")
+    private Set<Photo> photos = new HashSet<>();
 
     public Product() {
     }
@@ -52,5 +56,25 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Set<Photo> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(Set<Photo> photos) {
+        this.photos = photos;
+    }
+
+    public void addPhoto(Photo photo) {
+        photos.add(photo);
     }
 }

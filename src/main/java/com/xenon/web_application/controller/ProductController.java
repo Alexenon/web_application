@@ -1,5 +1,6 @@
 package com.xenon.web_application.controller;
 
+import com.xenon.web_application.model.Photo;
 import com.xenon.web_application.model.Product;
 import com.xenon.web_application.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * TODO:
+ *  - Find by category
+ *  - Remove product
+ *  - Update product
+ *  - Main product photo
+ * */
 @RestController
 @RequestMapping("/collections")
 public class ProductController {
@@ -20,14 +28,22 @@ public class ProductController {
     }
 
     @GetMapping("/all")
-    public void getAllProducts() {
-        productService.getAllProducts();
+    public List<Product> getAllProducts() {
+        return productService.getAllProducts();
     }
 
+
     @PostMapping("/add")
-    public String saveProduct(@RequestBody Product product) {
-        productService.saveProduct(product);
-        return "New product was saved!";
+    public Product saveProduct(@RequestBody Product product) {
+        return productService.saveProduct(product);
+    }
+
+    @PutMapping("/addPhoto/{productId}")
+    public Product addPhotoForProduct(
+            @PathVariable Integer productId,
+            @RequestBody Photo photo
+    ) {
+        return productService.addPhotoForProduct(productId, photo);
     }
 
 }
