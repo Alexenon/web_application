@@ -7,7 +7,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Collections from "./pages/collections/Collections";
-import NotFound from "./pages/not-found-page/Not-found-page";
+import NotFound from "./pages/not-found/NotFound";
 
 ReactDOM.render(
     <Router>
