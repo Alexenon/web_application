@@ -7,14 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * TODO:
- *  - Find by category
- *  - Remove product
- *  - Update product
+ *  - Filter products
+ *  - Remove one product / all
+ *  - Update product using id
  *  - Main product photo
- * */
+ */
 @RestController
 @RequestMapping("/collections")
 public class ProductController {
@@ -24,7 +25,7 @@ public class ProductController {
 
     @GetMapping
     public List<Product> getLastProducts() {
-        return productService.getAllProducts(); // TODO: Change this to add last products
+        return productService.getAllProducts();
     }
 
     @GetMapping("/all")
@@ -32,10 +33,21 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
-
     @PostMapping("/add")
     public Product saveProduct(@RequestBody Product product) {
         return productService.saveProduct(product);
+    }
+
+    @DeleteMapping("/deleteProducts/all")
+    public String deleteAllProducts() {
+        productService.deleteAllProducts();
+        return "All products have been deleted";
+    }
+
+    @DeleteMapping("/deleteProduct/{id}")
+    public String deleteProductById(@PathVariable Integer productId) {
+        productService.deleteProductById(productId);
+        return "All products have been deleted";
     }
 
     @PutMapping("/addPhoto/{productId}")
@@ -44,6 +56,16 @@ public class ProductController {
             @RequestBody Photo photo
     ) {
         return productService.addPhotoForProduct(productId, photo);
+    }
+
+    @GetMapping("/")
+    public List<Product> getProductsByCategory(String category) {
+        return productService.getProductsByCategory(category);
+    }
+
+    @GetMapping("/filter")
+    public List<Product> getFilteredProducts(@RequestParam Map<String, String> customQuery) {
+        return productService.getFilteredProducts(customQuery);
     }
 
 }

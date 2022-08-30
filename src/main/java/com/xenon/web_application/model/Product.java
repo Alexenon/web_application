@@ -1,7 +1,6 @@
 package com.xenon.web_application.model;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,7 +13,7 @@ public class Product {
     private String name;
     private String description;
     private String category;
-    private BigDecimal price;
+    private double price;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="product_id")
@@ -23,7 +22,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String name, String description, BigDecimal price) {
+    public Product(int id, String name, String description, double price) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -50,11 +49,11 @@ public class Product {
         this.description = description;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
