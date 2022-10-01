@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * TODO:
@@ -44,10 +43,10 @@ public class ProductController {
         return "All products have been deleted";
     }
 
-    @DeleteMapping("/deleteProduct/{id}")
+    @DeleteMapping("/deleteProduct/{productId}")
     public String deleteProductById(@PathVariable Integer productId) {
         productService.deleteProductById(productId);
-        return "All products have been deleted";
+        return "Product with id=" + productId + " had been deleted";
     }
 
     @PutMapping("/addPhoto/{productId}")
@@ -58,15 +57,15 @@ public class ProductController {
         return productService.addPhotoForProduct(productId, photo);
     }
 
-    @GetMapping("/")
-    public List<Product> getProductsByCategory(String category) {
-        return productService.getProductsByCategory(category);
-    }
+//    @GetMapping("/category/{categoryName}")
+//    public List<Product> getProductsByCategory(@PathVariable String categoryName) {
+//        return productService.getProductsByCategory(categoryName);
+//    }
 
-    @GetMapping("/filter")
-    public List<Product> getFilteredProducts(@RequestParam Map<String, String> customQuery) {
-        return productService.getFilteredProducts(customQuery);
-    }
+//    @GetMapping("/filter")
+//    public List<Product> getFilteredProducts(@RequestParam Map<String, String> customQuery) {
+//        return productService.getFilteredProducts(customQuery);
+//    }
 
 }
 

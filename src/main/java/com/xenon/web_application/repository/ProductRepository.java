@@ -4,11 +4,13 @@ import com.xenon.web_application.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
-    List<Product> findProductsByCategory(String category);
+//    @Query(value = "SELECT * FROM Products WHERE Category = ?1", nativeQuery = true)
+//    List<Product> findProductsByCategory(String category);
+
+//    List<Product> findProductsUsingFilter(List<Object> listOfFilters);
+
 
 }

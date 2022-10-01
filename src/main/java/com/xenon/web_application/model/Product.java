@@ -13,16 +13,16 @@ public class Product {
     private String name;
     private String description;
     private String category;
-    private double price;
+    private Double price;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="product_id")
+    @JoinColumn(name = "product_id")
     private Set<Photo> photos = new HashSet<>();
 
     public Product() {
     }
 
-    public Product(int id, String name, String description, double price) {
+    public Product(int id, String name, String description, Double price) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -49,11 +49,11 @@ public class Product {
         this.description = description;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
