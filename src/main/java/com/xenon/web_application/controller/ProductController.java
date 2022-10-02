@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * TODO:
@@ -57,10 +58,16 @@ public class ProductController {
         return productService.addPhotoForProduct(productId, photo);
     }
 
-//    @GetMapping("/category/{categoryName}")
-//    public List<Product> getProductsByCategory(@PathVariable String categoryName) {
-//        return productService.getProductsByCategory(categoryName);
-//    }
+    @GetMapping("/category/{categoryName}")
+    public List<Product> getProductsByCategory(@PathVariable String categoryName) {
+        return productService.getProductsByCategory(categoryName);
+    }
+
+    @GetMapping("/search")
+    public List<Product> getFilteredProducts(@RequestParam("query") String query) {
+        return productService.searchForProducts(query);
+    }
+
 
 //    @GetMapping("/filter")
 //    public List<Product> getFilteredProducts(@RequestParam Map<String, String> customQuery) {

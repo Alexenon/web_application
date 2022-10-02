@@ -36,9 +36,13 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-//    public List<Product> getProductsByCategory(String category) {
-//        return productRepository.findProductsByCategory(category);
-//    }
+    public List<Product> getProductsByCategory(String category) {
+        return productRepository.findProductsByCategory(category);
+    }
+
+    public List<Product> searchForProducts(String query) {
+        return productRepository.searchForProducts(query);
+    }
 
 //    public List<Product> getFilteredProducts(Map<String, String> params) {
 //        int startPrice = Optional.of(Integer.parseInt(params.get("startPrice"))).orElse(0);
